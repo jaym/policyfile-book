@@ -1,0 +1,89 @@
+{
+  "revision_id": "e2ccbdc8758e0ce7d30f4a52b25eabc17647e4386e087fdaea233b600a86dbe5",
+  "name": "included",
+  "run_list": [
+    "recipe[example::default]",
+    "recipe[example::foo]",
+    "recipe[motd::default]"
+  ],
+  "cookbook_locks": {
+    "chef_handler": {
+      "version": "3.0.2",
+      "identifier": "60cbc4e26770cf157c9f5ec71c0abfdeb79784e5",
+      "dotted_decimal_identifier": "27245644236681423.6047998442675210.210963283805413",
+      "cache_key": "chef_handler-3.0.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef_handler/versions/3.0.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef_handler/versions/3.0.2/download",
+        "version": "3.0.2"
+      }
+    },
+    "example": {
+      "version": "1.0.0",
+      "identifier": "6c637d34bf31bd153dd11b8bfe3c6ac25bc6525d",
+      "dotted_decimal_identifier": "30508686891758013.5978942830542396.117382995923549",
+      "source": "../cookbooks/example",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "f3c0d75bb4ed94092f4bcf223ef71cde85bec18b",
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/example"
+      }
+    },
+    "motd": {
+      "version": "0.6.4",
+      "identifier": "0d3f734666cf0865c8d7a45a22edced763afa4c3",
+      "dotted_decimal_identifier": "3728939032170248.28649801148670701.227424485745859",
+      "cache_key": "motd-0.6.4-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/motd/versions/0.6.4/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/motd/versions/0.6.4/download",
+        "version": "0.6.4"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "chef_handler",
+        "= 3.0.2"
+      ],
+      [
+        "example",
+        "= 1.0.0"
+      ],
+      [
+        "motd",
+        "= 0.6.4"
+      ]
+    ],
+    "dependencies": {
+      "chef_handler (3.0.2)": [
+
+      ],
+      "example (1.0.0)": [
+
+      ],
+      "motd (0.6.4)": [
+        [
+          "chef_handler",
+          ">= 0.0.0"
+        ]
+      ]
+    }
+  }
+}
